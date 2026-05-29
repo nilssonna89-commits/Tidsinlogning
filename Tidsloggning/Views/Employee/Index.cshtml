@@ -1,0 +1,14 @@
+﻿@model List<Employee>
+
+
+
+<h2>Employees</h2>
+
+@foreach (Employee employee in Model)
+{
+    
+        <p><a href="Employee/Show/@employee.Id">@employee.Name</a></p>
+        
+    
+}
+<p><a href="Employee/Create">Add New Employee</a></p>

@@ -1,0 +1,14 @@
+﻿@model Work
+
+
+<h2>Edit Work</h2>
+
+<form action="/Work/Edit/@Model.Id" method="post">
+    <input type="text" name="Title" value="@Model.Title" placeholder="Work Place" />
+    <input type="number" name="Time" value="@Model.Time" placeholder="Hours" />
+    <textarea name="Description" placeholder="Description">@Model.Description</textarea>
+    <button>Save</button>
+</form>
+<div class="mt-3">
+    <a asp-controller="Work" asp-action="Index">Back To Works</a>
+</div>

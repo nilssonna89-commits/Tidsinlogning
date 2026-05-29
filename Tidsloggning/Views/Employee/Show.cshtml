@@ -1,0 +1,35 @@
+﻿@model EmployeeIndexViewModel
+
+<h2>Employee Details</h2>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>Name</th>
+            <td>@Model.EmployeeName</td>
+        </tr>
+    <tr>
+        <th>Birthyear</th>
+        <td>@Model.EmployeeBirthyear</td>
+        <tr>
+            <th>Work Place</th>
+            <td>@Model.WorkTitle</td>
+        </tr>
+        <tr>
+            <th>Work Hours</th>
+            <td>@Model.WorkTimes</td>
+        </tr>
+        <tr>
+            <th>Sum Work Hours</th>
+            <td>@Model.WorkTime</td>
+        </tr>
+        <tr>
+            <th>Work Description</th>
+            <td>@Model.WorkDescription</td>
+        </tr>
+    </table>
+
+<div class="mt-3">
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+    <a asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
+    <a asp-controller="Employee" asp-action="Index">Back</a>
+</div>

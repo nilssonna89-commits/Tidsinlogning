@@ -1,0 +1,19 @@
+﻿@model List<Employee>
+
+
+    <h2>Create Work</h2>
+<form action="/Work/Create" method="post">
+    <select name="EmployeeId">
+        @foreach (Employee employee in Model)
+        {
+            <option value="@employee.Id">@employee.Name</option>
+        }
+    </select>
+    <input type="text" name="Title" placeholder="Work Place" />
+    <input type="number" name="Time" value="" placeholder="Hours" />
+    <textarea name="Description" placeholder="Description"></textarea>
+    <button>Create Work</button>
+</form>
+<div class="mt-3">
+    <a asp-controller="Employee" asp-action="Index">Back</a>
+    </div>

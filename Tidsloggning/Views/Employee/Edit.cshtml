@@ -1,0 +1,12 @@
+﻿@model Employee
+
+
+<h2>Edit Employee</h2>
+
+<form action="/Employee/Edit/@Model.Id" method="post">
+    <input type="text" name="Name" value="@Model.Name" placeholder="Name" />
+    <input type="number" name="Birthyear" value="@Model.Birthyear" placeholder="Birthyear" />
+    <button>Save</button>
+</form>
+<div class="mt-3">
+    <a asp-controller="Employee" asp-action="Index">Back To Employees</a>

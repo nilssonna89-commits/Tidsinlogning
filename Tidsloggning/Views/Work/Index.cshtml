@@ -1,0 +1,12 @@
+﻿@model List<Work>
+
+
+
+<h2>Works</h2>
+
+@foreach (Work work in Model)
+{
+    <p><a href="/Work/Show/@work.Id">@work.Title</a></p>
+}
+
+<p><a href="/Work/Create">Add New Work</a></p>
